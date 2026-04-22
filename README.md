@@ -50,40 +50,6 @@
 ### Video Generation Controller
 ![Video Generation Controller](docs/video-generation.png)
 
-┌─────────────────────────────────────────────────────────────────┐
-│                        ClipForge.ai                             │
-│                                                                 │
-│  ┌─────────────┐    ┌──────────────────────────────────────┐   │
-│  │   React     │    │           Express Server              │   │
-│  │   Client    │───▶│                                      │   │
-│  │  (Vite)     │    │  ┌─────────────────────────────┐    │   │
-│  └─────────────┘    │  │   Clerk Webhook Controller  │    │   │
-│                      │  │  • User Account Creation    │    │   │
-│                      │  │  • User Account Deletion    │    │   │
-│                      │  │  • User Account Update      │    │   │
-│                      │  │  • Purchase / Webhook sync  │    │   │
-│                      │  └──────────────┬──────────────┘    │   │
-│                      │                 │                    │   │
-│                      │  ┌──────────────▼──────────────┐    │   │
-│                      │  │      Auth Middleware         │    │   │
-│                      │  │  (Clerk JWT Verification)   │    │   │
-│                      │  └──────┬───────────────┬───────┘    │   │
-│                      │         │               │             │   │
-│                      │  ┌──────▼──────┐ ┌─────▼──────────┐ │   │
-│                      │  │   User      │ │    Project     │ │   │
-│                      │  │ Controller  │ │   Controller   │ │   │
-│                      │  │ • Credits   │ │ • Image Gen    │ │   │
-│                      │  │ • Projects  │ │ • Video Gen    │ │   │
-│                      │  │ • Publish   │ │ • Upload       │ │   │
-│                      │  └──────┬──────┘ └──────┬─────────┘ │   │
-│                      └─────────┼───────────────┼───────────┘   │
-│                                │               │               │
-│  ┌─────────────┐    ┌──────────▼───────┐  ┌───▼────────────┐  │
-│  │  Cloudinary │◀───│  Neon PostgreSQL  │  │  Google Gemini │  │
-│  │   (Media)   │    │  (via Prisma ORM) │  │  + Google Veo  │  │
-│  └─────────────┘    └──────────────────┘  └────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-```
 
 ### Request Flows
 
