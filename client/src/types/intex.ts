@@ -13,6 +13,7 @@ export interface Project {
   userId?: string;
   user?: string;
   productName: string;
+  productDescription?: string;
   userPrompt?: string;
   aspectRatio: string;
   targetLength?: number;

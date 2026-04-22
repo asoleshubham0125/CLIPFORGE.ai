@@ -113,7 +113,7 @@ const Result = () => {
                   <video
                     src={project.generatedVideo}
                     controls
-                    autoplay
+                    autoPlay
                     loop
                     className="w-full h-full obeject-cover"
                   />
