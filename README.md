@@ -18,6 +18,8 @@
 
 *Upload a product photo + a model photo → AI generates professional lifestyle imagery & short-form UGC videos in seconds.*
 
+🌐 **Live Demo:** [clipforge-ai.vercel.app](https://clipforge-ai-ikpy.onrender.com) &nbsp;|&nbsp; 🖥️ **API:** [clipforge-ai-ikpy.onrender.com](https://clipforge-ai-ikpy.onrender.com)
+
 </div>
 
 ---
@@ -36,7 +38,18 @@
 
 ## 🏗️ Architecture
 
-```
+### Clerk Auth & Webhook Controller
+![Clerk Auth & Webhook Controller](docs/clerk-auth.png)
+
+### User Controller
+![User Controller](docs/user-controller.png)
+
+### Image Generation Controller
+![Image Generation Controller](docs/image-generation.png)
+
+### Video Generation Controller
+![Video Generation Controller](docs/video-generation.png)
+
 ┌─────────────────────────────────────────────────────────────────┐
 │                        ClipForge.ai                             │
 │                                                                 │
@@ -87,6 +100,23 @@ Request → Auth Middleware → Check Credits → Deduct 10 Credits
 → Fetch generated image → Veo Video Generation (polling)
 → Download video → Upload to Cloudinary → Update DB → Return videoUrl
 ```
+
+---
+
+## 🚀 Deployment
+
+| Service | Platform | URL |
+|---------|----------|-----|
+| **Frontend** | Vercel | [clipforge-ai.vercel.app](https://clipforge-ai.vercel.app) |
+| **Backend API** | Render | [clipforge-ai-ikpy.onrender.com](https://clipforge-ai-ikpy.onrender.com) |
+
+> ⚠️ **Clerk Webhook Setup:** In your Clerk dashboard → Webhooks, set the endpoint URL to your **Render backend** URL:
+> ```
+> https://clipforge-ai-ikpy.onrender.com/api/clerk
+> ```
+> Do NOT point it to the Vercel frontend URL — Vercel only serves the React app.
+
+> 💡 **Render Free Tier Note:** The free tier spins down after 15 min of inactivity. First request may take ~30s. Use [UptimeRobot](https://uptimerobot.com) to keep it alive.
 
 ---
 
