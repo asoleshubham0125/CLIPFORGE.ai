@@ -1,0 +1,689 @@
+
+
+=== WEBHOOK: user.deleted ===
+{
+  "deleted": true,
+  "id": "user_3CTEqOK7iFl2vBjE9JHkE0BmREw",
+  "object": "user"
+}
+
+=== WEBHOOK: user.created ===
+{
+  "backup_code_enabled": false,
+  "banned": false,
+  "bypass_client_trust": false,
+  "create_organization_enabled": true,
+  "created_at": 1776402460029,
+  "delete_self_enabled": true,
+  "deprovisioned": false,
+  "email_addresses": [
+    {
+      "created_at": 1776402452139,
+      "email_address": "loadmitrra@gmail.com",
+      "id": "idn_3CTH4yHkOQBohi50hRPTIIV8rns",
+      "linked_to": [
+        {
+          "id": "idn_3CTH4zfTpiGVfS9HDsm4i7mPGt6",
+          "type": "oauth_google"
+        }
+      ],
+      "matches_sso_connection": false,
+      "object": "email_address",
+      "reserved": false,
+      "updated_at": 1776402460044,
+      "verification": {
+        "attempts": null,
+        "expire_at": null,
+        "object": "verification_from_oauth",
+        "status": "verified",
+        "strategy": "from_oauth_google"
+      }
+    }
+  ],
+  "enterprise_accounts": [],
+  "external_accounts": [
+    {
+      "approved_scopes": "email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid profile",
+      "avatar_url": "https://lh3.googleusercontent.com/a/ACg8ocLl0od3Yn3AF-VaFhPOwqh0jQSX4zLnYmhVf0aSa0nrCPyGPw=s1000-c",
+      "created_at": 1776402452131,
+      "email_address": "loadmitrra@gmail.com",
+      "email_address_verified": true,
+      "external_account_id": "eac_3CTH52wfTfXt3rhFW0R8P5BIsrf",
+      "family_name": "",
+      "first_name": "LoadMitra",
+      "given_name": "LoadMitra",
+      "google_id": "103033120211690968652",
+      "id": "idn_3CTH4zfTpiGVfS9HDsm4i7mPGt6",
+      "identification_id": "idn_3CTH4zfTpiGVfS9HDsm4i7mPGt6",
+      "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMbDBvZDNZbjNBRi1WYUZoUE93cWgwalFTWDR6TG5ZbWhWZjBhU2EwbnJDUHlHUHc9czEwMDAtYyIsInMiOiJtQWk5VnJ6ajBDbVpZV3Z5SDYvUlFvZEVFNW83Tm9GMVd5d0lnN2VqVXRJIn0",
+      "label": null,
+      "last_name": "",
+      "object": "google_account",
+      "picture": "https://lh3.googleusercontent.com/a/ACg8ocLl0od3Yn3AF-VaFhPOwqh0jQSX4zLnYmhVf0aSa0nrCPyGPw=s1000-c",
+      "provider": "oauth_google",
+      "provider_user_id": "103033120211690968652",
+      "public_metadata": {},
+      "updated_at": 1776402452131,
+      "username": null,
+      "verification": {
+        "attempts": null,
+        "expire_at": 1776403044620,
+        "object": "verification_oauth",
+        "status": "verified",
+        "strategy": "oauth_google"
+      }
+    }
+  ],
+  "external_id": null,
+  "first_name": "LoadMitra",
+  "has_image": true,
+  "id": "user_3CTH626swz05ODIpJfBTfSSrRqx",
+  "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zQ1RINXpDZHdYZmZvNUsybUFzdE1vNWI0dzAifQ",
+  "last_active_at": 1776402460027,
+  "last_name": null,
+  "last_sign_in_at": null,
+  "legal_accepted_at": null,
+  "locale": null,
+  "locked": false,
+  "lockout_expires_in_seconds": null,
+  "mfa_disabled_at": null,
+  "mfa_enabled_at": null,
+  "object": "user",
+  "passkeys": [],
+  "password_enabled": false,
+  "password_last_updated_at": null,
+  "phone_numbers": [],
+  "primary_email_address_id": "idn_3CTH4yHkOQBohi50hRPTIIV8rns",
+  "primary_phone_number_id": null,
+  "primary_web3_wallet_id": null,
+  "private_metadata": {},
+  "profile_image_url": "https://images.clerk.dev/oauth_google/img_3CTH5zCdwXffo5K2mAstMo5b4w0",
+  "public_metadata": {},
+  "requires_password_reset": false,
+  "saml_accounts": [],
+  "totp_enabled": false,
+  "two_factor_enabled": false,
+  "unsafe_metadata": {},
+  "updated_at": 1776402460071,
+  "username": null,
+  "verification_attempts_remaining": 100,
+  "web3_wallets": []
+}
+
+=== WEBHOOK: paymentAttempt.updated ===
+{
+  "billing_date": 1776402476679,
+  "charge_type": "checkout",
+  "created_at": 1776402476682,
+  "failed_at": null,
+  "failed_reason": null,
+  "gateway_external_id": "pi_3TN4dE4QMKLKSfzD11dwV7NW",
+  "id": "pa_3CTH825YyX0PTHTHj6ZPl1c40WA",
+  "instance_id": "ins_3BwJpOW8A8bD2Ty5pT4lX8Y5qep",
+  "invoice_id": "stmt_202604_user_3CTH626swz05ODIpJfBTfSSrRqx",
+  "paid_at": 1776402477703,
+  "payee": {
+    "gateway_external_id": "acct_1REHuU4QMKLKSfzD",
+    "gateway_status": "active",
+    "gateway_type": "stripe",
+    "id": "cpayee_3BwJpItBCVWxmpYbev37Z5yMZip"
+  },
+  "payer": {
+    "email": "loadmitrra@gmail.com",
+    "first_name": "LoadMitra",
+    "id": "cpayer_3CTH65nD13TCRJ17TB2RuURTIVK",
+    "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zQ1RINXpDZHdYZmZvNUsybUFzdE1vNWI0dzAifQ",
+    "last_name": "",
+    "organization_id": "",
+    "organization_name": "",
+    "user_id": "user_3CTH626swz05ODIpJfBTfSSrRqx"
+  },
+  "payment_id": "cpa_3CTH861MhyRqvm7HCOrHQ5Q3CX9",
+  "payment_source": {
+    "card_type": "visa",
+    "gateway": "stripe",
+    "gateway_external_account_id": "acct_1REHuU4QMKLKSfzD",
+    "gateway_external_id": "pm_1TN4dE4QMKLKSfzDsNwIONrO",
+    "id": "cps_3CTH7zzrHjijDKoJCnt7rwAFGrW",
+    "last4": "4242",
+    "payment_method": "card",
+    "status": "active"
+  },
+  "statement_id": "stmt_202604_user_3CTH626swz05ODIpJfBTfSSrRqx",
+  "status": "paid",
+  "subscription_items": [
+    {
+      "amount": {
+        "amount": 2900,
+        "amount_formatted": "29.00",
+        "currency": "USD",
+        "currency_symbol": "$"
+      },
+      "canceled_at": null,
+      "credit": {
+        "amount": {
+          "amount": 0,
+          "amount_formatted": "",
+          "currency": "",
+          "currency_symbol": ""
+        },
+        "cycle_days_remaining": 0,
+        "cycle_days_total": 0,
+        "cycle_remaining_percent": 0
+      },
+      "credits": null,
+      "id": "csub_item_3CTH81VkFWPMKnqjo3vgZELs9Bp",
+      "lifetime_paid": 0,
+      "next_payment_amount": 0,
+      "next_payment_date": 0,
+      "past_due_at": null,
+      "period_end": 1778994476672,
+      "period_start": 1776402476672,
+      "plan": {
+        "amount": 2900,
+        "annual_monthly_amount": 0,
+        "currency": "USD",
+        "default_price_id": "cprice_3BwQWitStugW2wxJsqbtLpEvKdk",
+        "description": "",
+        "has_base_fee": true,
+        "id": "cplan_3BwQWegyTFuaEQ2IIYVF8PkjdNv",
+        "instance_id": "ins_3BwJpOW8A8bD2Ty5pT4lX8Y5qep",
+        "interval": 1,
+        "is_default": false,
+        "is_prorated": false,
+        "is_recurring": true,
+        "name": "Pro",
+        "period": "month",
+        "product_id": "cprd_3BwPFFHHfS0Oda9NHxqt9vgXxCt",
+        "publicly_visible": true,
+        "slug": "pro",
+        "supported_periods": "month"
+      },
+      "plan_period": "month",
+      "price_id": "cprice_3BwQWitStugW2wxJsqbtLpEvKdk",
+      "proration_date": "",
+      "status": "pending",
+      "totals": {
+        "base_fee": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "grand_total": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "subtotal": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "tax_total": {
+          "amount": 0,
+          "amount_formatted": "0.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        }
+      }
+    }
+  ],
+  "totals": {
+    "base_fee": {
+      "amount": 2900,
+      "amount_formatted": "29.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "grand_total": {
+      "amount": 2900,
+      "amount_formatted": "29.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "subtotal": {
+      "amount": 2900,
+      "amount_formatted": "29.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "tax_total": {
+      "amount": 0,
+      "amount_formatted": "0.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    }
+  },
+  "updated_at": 1776402477759
+}
+
+=== WEBHOOK: paymentAttempt.updated ===
+{
+  "billing_date": 1778990000533,
+  "charge_type": "checkout",
+  "created_at": 1776402671613,
+  "failed_at": null,
+  "failed_reason": null,
+  "gateway_external_id": "pi_3TN4gN4QMKLKSfzD0wshIZbx",
+  "id": "pa_3CTHWWz91r9XhWQBlqRMo6nA3e3",
+  "instance_id": "ins_3BwJpOW8A8bD2Ty5pT4lX8Y5qep",
+  "invoice_id": "stmt_202604_user_3CT2IW9JlaD0IBEdXNCH6VsSsrG",
+  "paid_at": 1776402672609,
+  "payee": {
+    "gateway_external_id": "acct_1REHuU4QMKLKSfzD",
+    "gateway_status": "active",
+    "gateway_type": "stripe",
+    "id": "cpayee_3BwJpItBCVWxmpYbev37Z5yMZip"
+  },
+  "payer": {
+    "email": "asoleshubham01@gmail.com",
+    "first_name": "Shubham",
+    "id": "cpayer_3CT2IdFOsbnQAjxVs0ybVwEIxAg",
+    "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zQ1QySVpXOGthSWNiU2RvbUJwd1V2djNCWlUifQ",
+    "last_name": "Asole",
+    "organization_id": "",
+    "organization_name": "",
+    "user_id": "user_3CT2IW9JlaD0IBEdXNCH6VsSsrG"
+  },
+  "payment_id": "cpa_3CTHWZE3fs2JPPVXC6CYjaI7q0Q",
+  "payment_source": {
+    "card_type": "visa",
+    "gateway": "stripe",
+    "gateway_external_account_id": "acct_1REHuU4QMKLKSfzD",
+    "gateway_external_id": "pm_1TN3T14QMKLKSfzD0PLviDof",
+    "id": "cps_3CT83bBTA55Ov1rOp6L07RyWDuq",
+    "last4": "4242",
+    "payment_method": "card",
+    "status": "active"
+  },
+  "statement_id": "stmt_202604_user_3CT2IW9JlaD0IBEdXNCH6VsSsrG",
+  "status": "paid",
+  "subscription_items": [
+    {
+      "amount": {
+        "amount": 9900,
+        "amount_formatted": "99.00",
+        "currency": "USD",
+        "currency_symbol": "$"
+      },
+      "canceled_at": null,
+      "credit": {
+        "amount": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "cycle_days_remaining": 30,
+        "cycle_days_total": 30,
+        "cycle_remaining_percent": 1
+      },
+      "credits": {
+        "proration": {
+          "amount": {
+            "amount": 2900,
+            "amount_formatted": "29.00",
+            "currency": "USD",
+            "currency_symbol": "$"
+          },
+          "cycle_days_remaining": 30,
+          "cycle_days_total": 30,
+          "cycle_remaining_percent": 1
+        },
+        "total": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        }
+      },
+      "id": "csub_item_3CTHWbWJCnkliyXx9RZAXvRCyYC",
+      "lifetime_paid": 0,
+      "next_payment_amount": 0,
+      "next_payment_date": 0,
+      "past_due_at": null,
+      "period_end": 1778994671607,
+      "period_start": 1776402671607,
+      "plan": {
+        "amount": 9900,
+        "annual_monthly_amount": 0,
+        "currency": "USD",
+        "default_price_id": "cprice_3BwQsTrcMEwNuYaXN08M7ZNxyzH",
+        "description": "",
+        "has_base_fee": true,
+        "id": "cplan_3BwQsbEpnktNgl1MKSxq87JAM5t",
+        "instance_id": "ins_3BwJpOW8A8bD2Ty5pT4lX8Y5qep",
+        "interval": 1,
+        "is_default": false,
+        "is_prorated": false,
+        "is_recurring": true,
+        "name": "Ultra",
+        "period": "month",
+        "product_id": "cprd_3BwPFFHHfS0Oda9NHxqt9vgXxCt",
+        "publicly_visible": true,
+        "slug": "ultra",
+        "supported_periods": "month"
+      },
+      "plan_period": "month",
+      "price_id": "cprice_3BwQsTrcMEwNuYaXN08M7ZNxyzH",
+      "proration_date": "2026-04-17",
+      "status": "pending",
+      "totals": {
+        "base_fee": {
+          "amount": 9900,
+          "amount_formatted": "99.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "grand_total": {
+          "amount": 7000,
+          "amount_formatted": "70.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "subtotal": {
+          "amount": 9900,
+          "amount_formatted": "99.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "tax_total": {
+          "amount": 0,
+          "amount_formatted": "0.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        }
+      }
+    }
+  ],
+  "totals": {
+    "base_fee": {
+      "amount": 9900,
+      "amount_formatted": "99.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "grand_total": {
+      "amount": 7000,
+      "amount_formatted": "70.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "subtotal": {
+      "amount": 9900,
+      "amount_formatted": "99.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "tax_total": {
+      "amount": 0,
+      "amount_formatted": "0.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    }
+  },
+  "updated_at": 1776402672655
+}
+
+=== WEBHOOK: user.deleted ===
+{
+  "deleted": true,
+  "id": "user_3CT94Pn7NFcpBWriAolnl0y2mP4",
+  "object": "user"
+}
+
+=== WEBHOOK: user.created ===
+{
+  "backup_code_enabled": false,
+  "banned": false,
+  "bypass_client_trust": false,
+  "create_organization_enabled": true,
+  "created_at": 1776810114690,
+  "delete_self_enabled": true,
+  "deprovisioned": false,
+  "email_addresses": [
+    {
+      "created_at": 1776810114660,
+      "email_address": "ec22b1036@iiitdm.ac.in",
+      "id": "idn_3CgbMoVIaKfZFJPcSqzUWUG25qB",
+      "linked_to": [
+        {
+          "id": "idn_3CgbMo62awJZy3OjWJqfLCzaFV3",
+          "type": "oauth_google"
+        }
+      ],
+      "matches_sso_connection": false,
+      "object": "email_address",
+      "reserved": false,
+      "updated_at": 1776810114701,
+      "verification": {
+        "attempts": null,
+        "expire_at": null,
+        "object": "verification_from_oauth",
+        "status": "verified",
+        "strategy": "from_oauth_google"
+      }
+    }
+  ],
+  "enterprise_accounts": [],
+  "external_accounts": [
+    {
+      "approved_scopes": "email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid profile",
+      "avatar_url": "https://lh3.googleusercontent.com/a/ACg8ocL-K0TFtCv5F2HT0N0Kb2bQKvKC_6AjKavhFkO2agTzhFn2Eaw=s1000-c",
+      "created_at": 1776810114654,
+      "email_address": "ec22b1036@iiitdm.ac.in",
+      "email_address_verified": true,
+      "external_account_id": "eac_3CgbMq92ecEnynOG23090teSYPj",
+      "family_name": "KONDABA DATTATRAY ASOLE",
+      "first_name": "EC22B1036",
+      "given_name": "EC22B1036",
+      "google_id": "101528132659595794265",
+      "id": "idn_3CgbMo62awJZy3OjWJqfLCzaFV3",
+      "identification_id": "idn_3CgbMo62awJZy3OjWJqfLCzaFV3",
+      "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMLUswVEZ0Q3Y1RjJIVDBOMEtiMmJRS3ZLQ182QWpLYXZoRmtPMmFnVHpoRm4yRWF3PXMxMDAwLWMiLCJzIjoiMmhodDU4UlVhYjY3ZXZDM3oreVRqT2hhakJxcWU3VDZMbHlFQ1dwNDVtNCJ9",
+      "label": null,
+      "last_name": "KONDABA DATTATRAY ASOLE",
+      "object": "google_account",
+      "picture": "https://lh3.googleusercontent.com/a/ACg8ocL-K0TFtCv5F2HT0N0Kb2bQKvKC_6AjKavhFkO2agTzhFn2Eaw=s1000-c",
+      "provider": "oauth_google",
+      "provider_user_id": "101528132659595794265",
+      "public_metadata": {},
+      "updated_at": 1776810114654,
+      "username": null,
+      "verification": {
+        "attempts": null,
+        "expire_at": 1776810706601,
+        "object": "verification_oauth",
+        "status": "verified",
+        "strategy": "oauth_google"
+      }
+    }
+  ],
+  "external_id": null,
+  "first_name": "EC22B1036",
+  "has_image": true,
+  "id": "user_3CgbMqD04CtJ4DxV2CzE0cR0IEE",
+  "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zQ2diTW5TcDlvRXYzZWhZOEhIUXlVbE03RUgifQ",
+  "last_active_at": 1776810114689,
+  "last_name": "KONDABA DATTATRAY ASOLE",
+  "last_sign_in_at": null,
+  "legal_accepted_at": null,
+  "locale": null,
+  "locked": false,
+  "lockout_expires_in_seconds": null,
+  "mfa_disabled_at": null,
+  "mfa_enabled_at": null,
+  "object": "user",
+  "passkeys": [],
+  "password_enabled": false,
+  "password_last_updated_at": null,
+  "phone_numbers": [],
+  "primary_email_address_id": "idn_3CgbMoVIaKfZFJPcSqzUWUG25qB",
+  "primary_phone_number_id": null,
+  "primary_web3_wallet_id": null,
+  "private_metadata": {},
+  "profile_image_url": "https://images.clerk.dev/oauth_google/img_3CgbMnSp9oEv3ehY8HHQyUlM7EH",
+  "public_metadata": {},
+  "requires_password_reset": false,
+  "saml_accounts": [],
+  "totp_enabled": false,
+  "two_factor_enabled": false,
+  "unsafe_metadata": {},
+  "updated_at": 1776810114718,
+  "username": null,
+  "verification_attempts_remaining": 100,
+  "web3_wallets": []
+}
+
+=== WEBHOOK: paymentAttempt.updated ===
+{
+  "billing_date": 1776810148210,
+  "charge_type": "checkout",
+  "created_at": 1776810148213,
+  "failed_at": null,
+  "failed_reason": null,
+  "gateway_external_id": "pi_3TOmga4QMKLKSfzD0qFD9r52",
+  "id": "pa_3CgbR6ms5edGkem6UUnogI7srMX",
+  "instance_id": "ins_3BwJpOW8A8bD2Ty5pT4lX8Y5qep",
+  "invoice_id": "stmt_202604_user_3CgbMqD04CtJ4DxV2CzE0cR0IEE",
+  "paid_at": 1776810149324,
+  "payee": {
+    "gateway_external_id": "acct_1REHuU4QMKLKSfzD",
+    "gateway_status": "active",
+    "gateway_type": "stripe",
+    "id": "cpayee_3BwJpItBCVWxmpYbev37Z5yMZip"
+  },
+  "payer": {
+    "email": "ec22b1036@iiitdm.ac.in",
+    "first_name": "EC22B1036",
+    "id": "cpayer_3CgbNESF3hNnJIK42jo7AmrjVPm",
+    "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18zQ2diTW5TcDlvRXYzZWhZOEhIUXlVbE03RUgifQ",
+    "last_name": "KONDABA DATTATRAY ASOLE",
+    "organization_id": "",
+    "organization_name": "",
+    "user_id": "user_3CgbMqD04CtJ4DxV2CzE0cR0IEE"
+  },
+  "payment_id": "cpa_3CgbR3v797tLkKKgzaIzi1Fe1La",
+  "payment_source": {
+    "card_type": "visa",
+    "gateway": "stripe",
+    "gateway_external_account_id": "acct_1REHuU4QMKLKSfzD",
+    "gateway_external_id": "pm_1TOmgZ4QMKLKSfzDvtjdn2xJ",
+    "id": "cps_3CgbR8HMg7kfLkmchnRWE2U9xJb",
+    "last4": "4242",
+    "payment_method": "card",
+    "status": "active"
+  },
+  "statement_id": "stmt_202604_user_3CgbMqD04CtJ4DxV2CzE0cR0IEE",
+  "status": "paid",
+  "subscription_items": [
+    {
+      "amount": {
+        "amount": 2900,
+        "amount_formatted": "29.00",
+        "currency": "USD",
+        "currency_symbol": "$"
+      },
+      "canceled_at": null,
+      "credit": {
+        "amount": {
+          "amount": 0,
+          "amount_formatted": "",
+          "currency": "",
+          "currency_symbol": ""
+        },
+        "cycle_days_remaining": 0,
+        "cycle_days_total": 0,
+        "cycle_remaining_percent": 0
+      },
+      "credits": null,
+      "id": "csub_item_3CgbR5zd01QWt3OdyQMKsQqr49z",
+      "lifetime_paid": 0,
+      "next_payment_amount": 0,
+      "next_payment_date": 0,
+      "past_due_at": null,
+      "period_end": 1779402148205,
+      "period_start": 1776810148205,
+      "plan": {
+        "amount": 2900,
+        "annual_monthly_amount": 0,
+        "currency": "USD",
+        "default_price_id": "cprice_3BwQWitStugW2wxJsqbtLpEvKdk",
+        "description": "",
+        "has_base_fee": true,
+        "id": "cplan_3BwQWegyTFuaEQ2IIYVF8PkjdNv",
+        "instance_id": "ins_3BwJpOW8A8bD2Ty5pT4lX8Y5qep",
+        "interval": 1,
+        "is_default": false,
+        "is_prorated": false,
+        "is_recurring": true,
+        "name": "Pro",
+        "period": "month",
+        "product_id": "cprd_3BwPFFHHfS0Oda9NHxqt9vgXxCt",
+        "publicly_visible": true,
+        "slug": "pro",
+        "supported_periods": "month"
+      },
+      "plan_period": "month",
+      "price_id": "cprice_3BwQWitStugW2wxJsqbtLpEvKdk",
+      "proration_date": "",
+      "status": "pending",
+      "totals": {
+        "base_fee": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "grand_total": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "subtotal": {
+          "amount": 2900,
+          "amount_formatted": "29.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        },
+        "tax_total": {
+          "amount": 0,
+          "amount_formatted": "0.00",
+          "currency": "USD",
+          "currency_symbol": "$"
+        }
+      }
+    }
+  ],
+  "totals": {
+    "base_fee": {
+      "amount": 2900,
+      "amount_formatted": "29.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "grand_total": {
+      "amount": 2900,
+      "amount_formatted": "29.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "subtotal": {
+      "amount": 2900,
+      "amount_formatted": "29.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    },
+    "tax_total": {
+      "amount": 0,
+      "amount_formatted": "0.00",
+      "currency": "USD",
+      "currency_symbol": "$"
+    }
+  },
+  "updated_at": 1776810149371
+}
