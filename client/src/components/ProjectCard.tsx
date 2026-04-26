@@ -11,6 +11,7 @@ import {
   Trash2Icon,
 } from "lucide-react";
 import { GhostButton, PrimaryButton } from "./Buttons";
+import { useAuth } from "@clerk/react";
 import api from "../configs/axios";
 import { toast } from "react-hot-toast";
 
@@ -23,6 +24,7 @@ const ProjectCard = ({
   setGenerations: React.Dispatch<React.SetStateAction<Project[]>>;
   forCommunity?: boolean;
 }) => {
+  const { getToken } = useAuth();
 
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);

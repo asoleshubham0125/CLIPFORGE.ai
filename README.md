@@ -16,9 +16,9 @@
 
 ---
 
-*Upload a product photo + a model photo → AI generates professional lifestyle imagery & short-form UGC videos in seconds.*
+_Upload a product photo + a model photo → AI generates professional lifestyle imagery & short-form UGC videos in seconds._
 
-🌐 **Live Demo:** [clipforge-ai.vercel.app](https://clipforge-ai-ikpy.onrender.com) &nbsp;|&nbsp; 🖥️ **API:** [clipforge-ai-ikpy.onrender.com](https://clipforge-ai-ikpy.onrender.com)
+🌐 **Live Demo:** [clipforge-ai.vercel.app](https://clipforge-ai-psi.vercel.app/) &nbsp;|&nbsp; 🖥️ **API:** [clipforge-ai-ikpy.onrender.com](https://clipforge-ai-ikpy.onrender.com)
 
 </div>
 
@@ -39,21 +39,25 @@
 ## 🏗️ Architecture
 
 ### Clerk Auth & Webhook Controller
+
 ![Clerk Auth & Webhook Controller](docs/clerk-auth.png)
 
 ### User Controller
+
 ![User Controller](docs/user-controller.png)
 
 ### Image Generation Controller
+
 ![Image Generation Controller](docs/image-generation.png)
 
 ### Video Generation Controller
-![Video Generation Controller](docs/video-generation.png)
 
+![Video Generation Controller](docs/video-generation.png)
 
 ### Request Flows
 
 **Image Generation Flow**
+
 ```
 Request → Auth Middleware → Check Credits → Deduct 5 Credits
 → Upload images to Cloudinary → Gemini Image Generation
@@ -61,6 +65,7 @@ Request → Auth Middleware → Check Credits → Deduct 5 Credits
 ```
 
 **Video Generation Flow**
+
 ```
 Request → Auth Middleware → Check Credits → Deduct 10 Credits
 → Fetch generated image → Veo Video Generation (polling)
@@ -71,15 +76,17 @@ Request → Auth Middleware → Check Credits → Deduct 10 Credits
 
 ## 🚀 Deployment
 
-| Service | Platform | URL |
-|---------|----------|-----|
-| **Frontend** | Vercel | [clipforge-ai.vercel.app](https://clipforge-ai.vercel.app) |
-| **Backend API** | Render | [clipforge-ai-ikpy.onrender.com](https://clipforge-ai-ikpy.onrender.com) |
+| Service         | Platform | URL                                                                      |
+| --------------- | -------- | ------------------------------------------------------------------------ |
+| **Frontend**    | Vercel   | [clipforge-ai.vercel.app](https://clipforge-ai.vercel.app)               |
+| **Backend API** | Render   | [clipforge-ai-ikpy.onrender.com](https://clipforge-ai-ikpy.onrender.com) |
 
 > ⚠️ **Clerk Webhook Setup:** In your Clerk dashboard → Webhooks, set the endpoint URL to your **Render backend** URL:
+>
 > ```
 > https://clipforge-ai-ikpy.onrender.com/api/clerk
 > ```
+>
 > Do NOT point it to the Vercel frontend URL — Vercel only serves the React app.
 
 > 💡 **Render Free Tier Note:** The free tier spins down after 15 min of inactivity. First request may take ~30s. Use [UptimeRobot](https://uptimerobot.com) to keep it alive.
@@ -88,18 +95,18 @@ Request → Auth Middleware → Check Credits → Deduct 10 Credits
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | React 19, TypeScript, Vite, TailwindCSS |
-| **Backend** | Node.js, Express 5, TypeScript, tsx |
-| **Database** | Neon (PostgreSQL), Prisma ORM |
-| **Authentication** | Clerk (JWT + Webhooks) |
-| **AI — Images** | Google Gemini (`gemini-3.1-flash-image-preview`) |
-| **AI — Videos** | Google Veo (`veo-3.1-generate-preview`) |
-| **Media Storage** | Cloudinary |
-| **File Uploads** | Multer |
-| **Error Tracking** | Sentry |
-| **Deployment** | Hostinger VPS |
+| Layer              | Technology                                       |
+| ------------------ | ------------------------------------------------ |
+| **Frontend**       | React 19, TypeScript, Vite, TailwindCSS          |
+| **Backend**        | Node.js, Express 5, TypeScript, tsx              |
+| **Database**       | Neon (PostgreSQL), Prisma ORM                    |
+| **Authentication** | Clerk (JWT + Webhooks)                           |
+| **AI — Images**    | Google Gemini (`gemini-3.1-flash-image-preview`) |
+| **AI — Videos**    | Google Veo (`veo-3.1-generate-preview`)          |
+| **Media Storage**  | Cloudinary                                       |
+| **File Uploads**   | Multer                                           |
+| **Error Tracking** | Sentry                                           |
+| **Deployment**     | Hostinger VPS                                    |
 
 ---
 
@@ -146,6 +153,7 @@ ugc-project/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+
 - A [Neon](https://neon.tech) PostgreSQL database
 - A [Clerk](https://clerk.com) application
@@ -217,36 +225,38 @@ VITE_CLERK_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxx
 ## 📡 API Reference
 
 ### Auth
+
 All protected routes require `Authorization: Bearer <clerk_token>` header.
 
 ### Project Routes — `/api/project`
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| `POST` | `/create` | ✅ | Generate AI image from 2 uploaded photos |
-| `POST` | `/video` | ✅ | Generate video from existing project |
-| `GET` | `/published` | ❌ | Get all community-published projects |
-| `DELETE` | `/:projectId` | ✅ | Delete a project |
+| Method   | Endpoint      | Auth | Description                              |
+| -------- | ------------- | ---- | ---------------------------------------- |
+| `POST`   | `/create`     | ✅   | Generate AI image from 2 uploaded photos |
+| `POST`   | `/video`      | ✅   | Generate video from existing project     |
+| `GET`    | `/published`  | ❌   | Get all community-published projects     |
+| `DELETE` | `/:projectId` | ✅   | Delete a project                         |
 
 ### User Routes — `/api/user`
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| `GET` | `/credits` | ✅ | Fetch user credit balance |
-| `GET` | `/generations` | ✅ | Fetch user's projects |
-| `POST` | `/publish` | ✅ | Publish/unpublish a project |
+| Method | Endpoint       | Auth | Description                 |
+| ------ | -------------- | ---- | --------------------------- |
+| `GET`  | `/credits`     | ✅   | Fetch user credit balance   |
+| `GET`  | `/generations` | ✅   | Fetch user's projects       |
+| `POST` | `/publish`     | ✅   | Publish/unpublish a project |
 
 ### Webhook — `/api/clerk`
+
 Handles Clerk webhook events (user created, updated, deleted, plan purchased).
 
 ---
 
 ## 💳 Credit System
 
-| Action | Credits Required |
-|--------|-----------------|
-| Generate AI Image | 5 credits |
-| Generate AI Video | 10 credits |
+| Action            | Credits Required |
+| ----------------- | ---------------- |
+| Generate AI Image | 5 credits        |
+| Generate AI Video | 10 credits       |
 
 Credits are deducted before generation and **refunded automatically** if the AI generation fails.
 
@@ -255,6 +265,7 @@ Credits are deducted before generation and **refunded automatically** if the AI 
 ## 🧑‍💻 Author
 
 **Shubham Asole**
+
 - GitHub: [@asoleshubham0125](https://github.com/asoleshubham0125)
 - LinkedIn: [Shubham Asole](https://linkedin.com/in/shubham-asole)
 
