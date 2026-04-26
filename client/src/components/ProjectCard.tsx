@@ -35,9 +35,9 @@ const ProjectCard = ({
     if (!confirmDelete) return;
 
     try {
-      // const token = await getToken();
+      const token = await getToken();
       const { data } = await api.delete(`/api/project/${id}`, {
-        headers: { Authorization: "Bearer ${token}" },
+        headers: { Authorization: `Bearer ${token}` },
       });
       setGenerations((generations) =>
         generations.filter((gen) => gen.id != id),
@@ -52,9 +52,9 @@ const ProjectCard = ({
 
   const togglePublish = async (projectId: string) => {
     try {
-      // const token = await getToken();
+      const token = await getToken();
       const { data } = await api.get(`/api/user/publish/${projectId}`, {
-        headers: { Authorization: "Bearer ${token}" },
+        headers: { Authorization: `Bearer ${token}` },
       });
       setGenerations((generations) =>
         generations.map((gen) =>

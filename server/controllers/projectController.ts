@@ -32,6 +32,9 @@ const loadImage = (path: string, mimeType: string) => {
 export const createProject = async (req: Request, res: Response) => {
   let tempProjectId: string;
   const { userId } = getAuth(req);
+  if (!userId) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
   let isCreditDetected = false;
 
   try {
@@ -198,6 +201,9 @@ export const createProject = async (req: Request, res: Response) => {
 
 export const createVideo = async (req: Request, res: Response) => {
   const { userId } = getAuth(req);
+  if (!userId) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
   const { projectId } = req.body;
   let isCreditDetucted = false;
 
@@ -344,6 +350,9 @@ export const getAllPublishedProjects = async (req: Request, res: Response) => {
 export const deleteProjects = async (req: Request, res: Response) => {
   try {
     const { userId } = getAuth(req);
+    if (!userId) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
     const { projectId } = req.body;
 
     const project = await prisma.project.findUnique({

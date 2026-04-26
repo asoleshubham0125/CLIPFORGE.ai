@@ -43,6 +43,9 @@ export const getUserCredits = async (req: Request, res: Response) => {
 export const getAllProjects = async (req: Request, res: Response) => {
   try {
     const { userId } = getAuth(req);
+    if (!userId) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
 
     const projects = await prisma.project.findMany({
       where: { userId },
@@ -60,6 +63,9 @@ export const getAllProjects = async (req: Request, res: Response) => {
 export const getProjectByID = async (req: Request, res: Response) => {
   try {
     const { userId } = getAuth(req);
+    if (!userId) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
     const projectId = req.params.projectId as string;
 
     const project = await prisma.project.findUnique({
@@ -81,6 +87,9 @@ export const getProjectByID = async (req: Request, res: Response) => {
 export const toggleProjectPublic = async (req: Request, res: Response) => {
   try {
     const { userId } = getAuth(req);
+    if (!userId) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
     const projectId = req.params.projectId as string;
 
     const project = await prisma.project.findUnique({
